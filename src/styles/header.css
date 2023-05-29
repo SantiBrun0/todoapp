@@ -1,0 +1,110 @@
+
+header {
+    width: 375px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    border-bottom: 3px solid black;
+}
+
+.header-darkmode {
+    width: 375px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    border-bottom: 3px solid white;
+    background-color: black;
+}
+
+.title-app-darkmode {
+    color: white;
+}
+
+.logo-icon {
+    width: 35px;
+    margin-left: 15px;
+    border-radius: 50%;
+}
+
+.mode-selector {
+    margin-right: 15px;
+}
+
+.label-darkmode-toggle {
+    width: 63px;
+    height: 30px;
+    position: relative;
+    display: block;
+    background: #ebebeb;
+    border-radius: 15px;
+    box-shadow: inset 0px 2px 8px rgba(0, 0, 0, 0.2), inset 0px -2px 8px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.label-darkmode-toggle:after {
+    content: "";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background: linear-gradient(180deg, #fff, #eee);
+    border-radius: 15px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+#darkmode-toggle {
+    display: none;
+}
+
+#darkmode-toggle:checked + .label-darkmode-toggle {
+    background: #242424;
+    color: white;
+}
+
+#darkmode-toggle:checked + .label-darkmode-toggle:after {
+    left: 60px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+.label-darkmode-toggle, .label-darkmode-toggle:after {
+    transition: all ease 0.3s;
+}
+
+.label-darkmode-toggle:active:after {
+    width: 20px;
+}
+
+.label-darkmode-toggle .mode-icon {
+    position: absolute;
+    width: 25px;
+    top: 5px;
+    z-index: 100;
+}
+
+.label-darkmode-toggle .light-mode {
+    left: 5px;
+    fill: #fff;
+    font-size: 20px;
+    transition: all ease 0.3s;
+}
+
+.label-darkmode-toggle .dark-mode {
+    left: 39px;
+    fill: #7e7e7e;
+    font-size: 20px;
+    transition: all ease 0.3s;
+}
+
+#darkmode-toggle:checked + .label-darkmode-toggle .light-mode {
+    fill: #7e7e7e;
+}
+
+#darmode-toggle:checked + .label-darkmode-toggle .dark-mode {
+    fill: #fff;
+}

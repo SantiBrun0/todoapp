@@ -1,0 +1,120 @@
+
+.fab {
+    width: 375px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    bottom: 40px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all ease 0.3s;
+}
+
+.fab:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.fab:active {
+    opacity: 0.4;
+}
+
+.fab-lightmode {
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+}
+
+.fab-darkmode {
+    border: 2px solid white;
+    background-color: white;
+    color: black;
+}
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 100000;
+    padding: 20px 40px;
+}
+
+.modal-darkmode {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.modal-lightmode {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    width: 80%;
+    height: 45%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.modal-content .btn-close {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    margin-right: 20px;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    color: white;
+    background-color: red;
+}
+
+.modal-content label {
+    font-size: 1.5rem;
+}
+
+.modal-content input {
+    width: 80%;
+    padding: 5px 10px;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.modal-content-darkmode {
+    border: 5px solid white;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+
+.modal-content-lightmode {
+    border: 5px solid black;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.modal-content .btn-add {
+    padding: 8px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: greenyellow;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 20px;
+}
