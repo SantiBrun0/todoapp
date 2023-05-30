@@ -4,16 +4,19 @@ import { v4 as uuidv4 } from 'uuid';
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState();
   const [tasks, setTasks] = useState([])
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
+    localStorage.setItem('dark', JSON.stringify(!isDarkMode))
   };
 
   useEffect(() => {
     const savedTasks = JSON.parse(localStorage.getItem('ToDoApp')) || []
     setTasks(savedTasks)
+    const mode = JSON.parse(localStorage.getItem('dark')) || false
+    setIsDarkMode(mode)
   }, [])
 
   const addTask = (task) => {

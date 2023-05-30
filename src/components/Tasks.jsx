@@ -9,7 +9,7 @@ const Tasks = () => {
 
   const tasksComplete = tasks.filter(task => task.status == true)
   const tasksIncomplete = tasks.filter(task => task.status == false)
-console.log(tasksComplete);
+  
   return (
     <section className={isDarkMode ? 'tasks-darkmode' : 'tasks'}>
       {
