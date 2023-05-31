@@ -56,7 +56,7 @@
 }
 
 .modal-content {
-    width: 80%;
+    width: 360px;
     height: 45%;
     display: flex;
     position: absolute;
